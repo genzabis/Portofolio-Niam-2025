@@ -63,13 +63,6 @@ const Proyek: React.FC = () => {
               transition={{ duration: 1.2, delay: index % 2 === 0 ? 0 : 0.2, ease: [0.16, 1, 0.3, 1] }}
               className={`group cursor-pointer ${index % 2 !== 0 ? 'md:mt-48' : ''}`}
             >
-              <div className="relative overflow-hidden mb-12 bg-slate-100 dark:bg-zinc-900">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-auto object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transform group-hover:scale-105 transition-all duration-1000 ease-[0.16,1,0.3,1]"
-                />
-              </div>
               <div>
                 <p className="text-xs font-normal text-slate-500 dark:text-zinc-500 uppercase tracking-[0.3em] mb-4 transition-colors">{project.year}</p>
                 <h3 className="text-3xl md:text-4xl font-serif font-normal text-slate-900 dark:text-white mb-4 transition-colors tracking-tight">
