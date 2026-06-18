@@ -23,8 +23,8 @@ const Hero: React.FC = () => {
 
           <div className="mt-16 max-w-2xl mx-auto">
             <h2 className="text-2xl md:text-4xl font-serif font-normal text-slate-900 dark:text-zinc-300 mb-8 leading-snug">
-              Software Engineer <span className="italic">&</span> <br/>
-              UI/UX Designer
+              CPTO <span className="italic">at</span> The Nusantara Times<br/>
+              Software Engineer <span className="italic">&</span> UI/UX Designer
             </h2>
             <p className="text-base md:text-lg text-slate-500 dark:text-zinc-500 leading-relaxed font-light max-w-xl mx-auto">
               Multi-disciplinary technology leader blending full-stack engineering, product strategy, and design thinking.
