@@ -1,41 +1,59 @@
-
 import React from 'react';
+import { motion } from 'framer-motion';
 import { EDUCATION } from '../data/portfolioData';
 
 const Pendidikan: React.FC = () => {
   return (
-    <section id="pendidikan" className="py-20 border-t border-slate-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold text-slate-900 mb-2">Pendidikan</h2>
-          <div className="w-16 h-1 bg-blue-700 rounded-full"></div>
-        </div>
-        <div className="grid lg:grid-cols-2 gap-8">
-          {EDUCATION.map((edu, idx) => (
-            <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col h-full">
-              <div className="flex justify-between items-start mb-4">
-                <div className="bg-blue-100 p-3 rounded-xl text-blue-700">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
-                  </svg>
+    <section className="py-32 lg:py-48 bg-white dark:bg-[#050505] transition-colors">
+      <div className="max-w-[80%] mx-auto">
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-32"
+        >
+          <span className="text-slate-900 dark:text-zinc-400 font-medium text-xs uppercase tracking-[0.4em] mb-8 block transition-colors">Academic</span>
+          <h2 className="text-6xl md:text-8xl font-serif font-normal text-slate-900 dark:text-white transition-colors tracking-tighter">
+            Education
+          </h2>
+        </motion.div>
+
+        <div className="relative">
+          {/* Timeline line */}
+          <div className="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-slate-200 dark:bg-zinc-800" />
+          
+          <div className="space-y-24">
+            {EDUCATION.map((edu, index) => (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.2, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
+                className="relative pl-12 md:pl-20"
+              >
+                {/* Timeline dot */}
+                <div className="absolute left-[13px] md:left-[29px] top-1 w-[7px] h-[7px] rounded-full bg-slate-300 dark:bg-zinc-600 ring-4 ring-white dark:ring-[#050505]" />
+                
+                <p className="text-xs font-medium text-slate-400 dark:text-zinc-500 uppercase tracking-[0.3em] mb-3 transition-colors">{edu.period}</p>
+                <h3 className="text-3xl md:text-5xl font-serif font-normal text-slate-900 dark:text-white mb-3 transition-colors tracking-tight">
+                  {edu.institution}
+                </h3>
+                <h4 className="text-xl md:text-2xl font-normal text-slate-500 dark:text-zinc-400 italic mb-3 transition-colors">
+                  {edu.degree}
+                </h4>
+                <p className="text-base font-medium text-slate-900 dark:text-white mb-8 transition-colors">{edu.grade}</p>
+                <div className="space-y-3 max-w-2xl font-sans font-light">
+                  {edu.achievements.map((ach, idx) => (
+                    <p key={idx} className="text-base text-slate-600 dark:text-zinc-400 leading-relaxed transition-colors">
+                      {ach}
+                    </p>
+                  ))}
                 </div>
-                <span className="text-sm font-semibold text-slate-400">{edu.period}</span>
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-1">{edu.institution}</h3>
-              <p className="text-blue-700 font-semibold mb-2">{edu.degree}</p>
-              <p className="text-slate-500 font-medium text-sm mb-6">Nilai: {edu.grade}</p>
-              <ul className="space-y-3 mt-auto">
-                {edu.achievements.map((item, i) => (
-                  <li key={i} className="text-slate-600 text-sm flex items-start">
-                    <span className="text-blue-300 mr-2 mt-1">•</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

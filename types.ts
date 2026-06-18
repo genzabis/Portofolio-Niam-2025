@@ -25,6 +25,8 @@ export interface Project {
   title: string;
   role: string;
   year: string;
+  image: string;
+  description: string;
 }
 
 export interface Achievement {
@@ -36,4 +38,10 @@ export interface Achievement {
 export interface SkillSet {
   category: string;
   items: string[];
+}
+
+export interface Certification {
+  title: string;
+  issuer: string;
+  year: string;
 }

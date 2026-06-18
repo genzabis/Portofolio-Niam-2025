@@ -1,0 +1,70 @@
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+.dot-grid {
+  background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+html.dark .dot-grid {
+  background-image: radial-gradient(#27272a 1px, transparent 1px);
+}
+.glass-nav {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 232, 240, 0.5);
+}
+html.dark .glass-nav {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.hero-glow {
+  background: radial-gradient(
+    circle at center,
+    rgba(37, 99, 235, 0.08) 0%,
+    transparent 70%
+  );
+}
+html.dark .hero-glow {
+  background: radial-gradient(
+    circle at center,
+    rgba(37, 99, 235, 0.04) 0%,
+    transparent 70%
+  );
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+.grain-overlay::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+html.dark .grain-overlay::after {
+  opacity: 0.04;
+}
+.reveal-line {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transform: translateY(40px);
+  transition: clip-path 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-line.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transform: translateY(0);
+}
