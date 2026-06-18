@@ -1,59 +1,36 @@
-
 import React from 'react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-  
   return (
-    <footer className="bg-slate-900 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
-          <div className="text-center md:text-left">
-            <h2 className="text-2xl font-bold mb-2">NNS.</h2>
+    <footer className="bg-white dark:bg-[#050505] transition-colors pt-8 md:pt-12 pb-12 md:pb-24">
+      <div className="max-w-[90%] mx-auto">
+        <div className="flex flex-col items-center md:flex-row md:justify-between md:items-end mb-12 md:mb-24 gap-8 md:gap-16">
+          <div className="text-[12vw] md:text-[10vw] font-serif font-normal tracking-tighter leading-[0.8] text-slate-900 dark:text-white transition-colors text-center md:text-left">
+            NNS<span className="text-slate-300 dark:text-zinc-800">.</span>
           </div>
-          <div className="flex gap-8 text-sm font-medium">
-            <a
-              href="#hero"
-              className="text-slate-400 hover:text-white transition-colors"
-            >
-              Utama
+          
+          <div className="flex flex-col items-center gap-4 md:gap-8 md:items-end md:text-right">
+            <a href={`https://${PERSONAL_INFO.linkedin}`} target="_blank" rel="noreferrer" aria-label="LinkedIn Profile" className="text-sm md:text-base font-normal uppercase tracking-[0.4em] text-slate-900 dark:text-white hover:opacity-50 transition-opacity duration-500">
+              LinkedIn ↗
             </a>
-            <a
-              href="#proyek"
-              className="text-slate-400 hover:text-white transition-colors"
-            >
-              Proyek
+            <a href={`https://github.com/${PERSONAL_INFO.githubUsername}`} target="_blank" rel="noreferrer" aria-label="GitHub Profile" className="text-sm md:text-base font-normal uppercase tracking-[0.4em] text-slate-900 dark:text-white hover:opacity-50 transition-opacity duration-500">
+              GitHub ↗
             </a>
-            <a
-              href="#tentang"
-              className="text-slate-400 hover:text-white transition-colors"
-            >
-              Kontak
-            </a>
-          </div>
-          <div className="flex gap-4">
-            <a
-              href="https://www.linkedin.com/in/niamilah-n-s/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
-            >
-              <span className="sr-only">LinkedIn</span>
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-              </svg>
+            <a href={`mailto:${PERSONAL_INFO.email}`} aria-label="Send Email" className="text-sm md:text-base font-normal uppercase tracking-[0.4em] text-slate-900 dark:text-white hover:opacity-50 transition-opacity duration-500">
+              Email ↗
             </a>
           </div>
         </div>
-        <div className="pt-8 border-t border-slate-800 text-center">
-          <p className="text-slate-500 text-xs">
-            © {currentYear} {PERSONAL_INFO.name}. Hak Cipta Dilindungi
-            Undang-Undang.
+
+        <div className="flex flex-col items-center gap-4 md:flex-row md:justify-between md:gap-8 pt-6 md:pt-8 border-t border-slate-100 dark:border-zinc-900 transition-colors">
+          <p className="text-xs font-normal uppercase tracking-[0.3em] text-slate-400 dark:text-zinc-600 transition-colors">
+            © {new Date().getFullYear()} Niamilah Nabil Syahputra. All Rights Reserved.
           </p>
-          <p className="text-slate-600 text-[10px] mt-2 tracking-widest uppercase">
-            Designed by nns
-          </p>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-xs font-normal uppercase tracking-[0.3em] text-slate-400 dark:text-zinc-600 transition-colors">
+            <a href="#home" aria-label="Back to top" className="hover:text-slate-900 dark:hover:text-white transition-colors">Back to Top ↑</a>
+            <a href={`mailto:${PERSONAL_INFO.email}`} aria-label="Contact via email" className="hover:text-slate-900 dark:hover:text-white transition-colors">Say Hello</a>
+          </div>
         </div>
       </div>
     </footer>
