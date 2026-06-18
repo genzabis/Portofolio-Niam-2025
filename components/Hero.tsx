@@ -46,21 +46,6 @@ const Hero: React.FC = () => {
           />
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2, delay: 1 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2"
-        >
-          <div className="flex flex-col items-center gap-2 text-slate-400 dark:text-zinc-600">
-            <span className="text-[10px] uppercase tracking-[0.3em] font-medium">Scroll</span>
-            <motion.div 
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="w-[1px] h-8 bg-slate-300 dark:bg-zinc-700"
-            />
-          </div>
-        </motion.div>
       </div>
     </section>
   );
