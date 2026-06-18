@@ -31,15 +31,6 @@ const Hero: React.FC = () => {
             </p>
           </div>
           
-          <div className="mt-16 flex gap-12">
-            <a href="#projects" className="group text-xs font-medium uppercase tracking-[0.3em] text-slate-900 dark:text-white hover:opacity-50 transition-all duration-500 flex items-center gap-4">
-              Explore Work
-              <span className="group-hover:translate-x-2 transition-transform duration-500">⟶</span>
-            </a>
-            <a href="#contact" className="text-xs font-medium uppercase tracking-[0.3em] text-slate-400 dark:text-zinc-500 hover:text-slate-900 dark:hover:text-white transition-all duration-500">
-              Get In Touch
-            </a>
-          </div>
         </motion.div>
         
         <motion.div 
