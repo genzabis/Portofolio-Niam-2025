@@ -1,44 +1,48 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SKILLS } from '../data/portfolioData';
 
 const Keahlian: React.FC = () => {
   return (
-    <section id="skills" className="py-32 lg:py-48 bg-white dark:bg-[#050505] transition-colors">
-      <div className="max-w-[80%] mx-auto">
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }}
+    <section id="skills" className="py-24 sm:py-32 lg:py-40 bg-white text-slate-900 border-t border-slate-100">
+      <div className="max-w-[85%] mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-32"
+          transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-24"
         >
-          <span className="text-slate-900 dark:text-zinc-400 font-medium text-xs uppercase tracking-[0.4em] mb-8 block transition-colors">Capabilities</span>
-          <h2 className="text-6xl md:text-8xl font-serif font-normal text-slate-900 dark:text-white transition-colors tracking-tighter">
-            Skills
+          <span className="text-slate-500 font-medium text-xs uppercase tracking-[0.35em] mb-4 block">
+            Technical Expertise
+          </span>
+          <h2 className="text-5xl sm:text-6xl md:text-7xl font-serif font-normal text-slate-900 tracking-tighter">
+            Skills & Capabilities
           </h2>
         </motion.div>
 
-        <div className="space-y-32">
+        <div className="space-y-16 sm:space-y-20">
           {SKILLS.map((skillGroup, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 1.2, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start"
+              transition={{ duration: 1.1, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
+              className="grid lg:grid-cols-12 gap-6 lg:gap-16 items-start pb-12 border-b border-slate-100 last:border-b-0"
             >
               <div className="lg:col-span-4">
-                <h3 className="text-3xl md:text-4xl font-serif font-normal text-slate-900 dark:text-white transition-colors">
+                <h3 className="text-2xl sm:text-3xl font-serif font-normal text-slate-900">
                   {skillGroup.category}
                 </h3>
               </div>
-              <div className="lg:col-span-8 flex flex-wrap gap-4 md:gap-x-12 gap-y-6">
+              <div className="lg:col-span-8 flex flex-wrap gap-2.5 sm:gap-3">
                 {skillGroup.items.map((skill, idx) => (
-                  <span 
-                    key={idx} 
-                    className="text-lg md:text-2xl text-slate-600 dark:text-zinc-400 font-sans font-light hover:text-slate-900 dark:hover:text-white transition-colors cursor-default"
+                  <span
+                    key={idx}
+                    className="px-4 py-2 text-sm sm:text-base font-sans font-normal text-slate-800 bg-slate-50 border border-slate-200/90 rounded-full hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all duration-300 select-none cursor-default"
                   >
                     {skill}
                   </span>

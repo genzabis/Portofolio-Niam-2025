@@ -2,8 +2,9 @@
 export interface Experience {
   company: string;
   department: string;
-  period: string;
+  period?: string;
   responsibilities: string[];
+  link?: string;
 }
 
 export interface Education {
@@ -27,6 +28,7 @@ export interface Project {
   year: string;
   image: string;
   description: string;
+  link?: string;
 }
 
 export interface Achievement {

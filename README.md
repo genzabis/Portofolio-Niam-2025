@@ -1,6 +1,6 @@
 # 🌐 Portfolio Website — Niamilah Nabil Syahputra
 
-Selamat datang di repositori website portofolio profesional saya! Website ini dibuat untuk memamerkan proyek, keterampilan, dan pengalaman saya sebagai seorang pengembang.
+Selamat datang di repositori website portofolio profesional saya! Website ini dibuat untuk memamerkan proyek, keterampilan, dan pengalaman saya sebagai Chief Product & Technology Officer, Software Engineer, dan UI/UX Designer.
 
 🔗 **Live Demo:** [portofolioniam.netlify.app](https://portofolioniam.netlify.app)
 
@@ -8,24 +8,26 @@ Selamat datang di repositori website portofolio profesional saya! Website ini di
 
 ## 🛠️ Teknologi yang Digunakan (Tech Stack)
 
-Website ini dibangun menggunakan teknologi modern untuk memastikan performa yang cepat dan pengalaman pengguna yang interaktif:
+Website ini dibangun menggunakan framework modern dengan standar desain dan kualitas tinggi:
 
-- **Frontend Framework:** [React 19](https://react.dev/)
+- **Framework:** [Next.js (App Router)](https://nextjs.org/)
+- **Frontend UI:** [React 19](https://react.dev/)
 - **Bahasa Pemrograman:** [TypeScript](https://www.typescriptlang.org/)
-- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) & PostCSS
+- **Animasi:** [Framer Motion](https://www.framer.com/motion/)
+
+---
 
 ## 🚀 Cara Menjalankan Secara Lokal
 
-Jika Anda ingin menjalankan atau memodifikasi proyek ini di komputer Anda sendiri, ikuti langkah-langkah berikut:
-
 ### Prasyarat
-Pastikan Anda sudah menginstal **Node.js** dan **npm** (atau package manager lain seperti pnpm/yarn) di komputer Anda.
+Pastikan Anda sudah menginstal **Node.js** (v18+ atau v20+) dan **npm** di komputer Anda.
 
 ### Langkah-langkah Instalasi
 
 1. **Clone repositori ini:**
    ```bash
-   git clone https://github.com/username-anda/repo-portofolio-anda.git
+   git clone https://github.com/genzabis/Portofolio-Niam-2025.git
    ```
 
 2. **Masuk ke direktori proyek:**
@@ -38,22 +40,38 @@ Pastikan Anda sudah menginstal **Node.js** dan **npm** (atau package manager lai
    npm install
    ```
 
-4. **Jalankan server pengembangan (development server):**
+4. **Jalankan development server:**
    ```bash
    npm run dev
    ```
 
-5. Buka browser dan kunjungi URL lokal yang muncul di terminal (biasanya `http://localhost:5173`).
+5. Buka browser dan kunjungi `http://localhost:3000`.
+
+### Build Produksi
+Untuk membuat dan menjalankan build produksi:
+```bash
+npm run build
+npm run start
+```
+
+---
 
 ## 📁 Struktur Direktori Utama
 
-- `src/` - Berisi semua kode sumber utama (komponen React, aset, styling, dll.)
-- `public/` - Aset statis yang tidak diproses oleh bundler
-- `package.json` - Daftar dependensi dan script proyek
+- `app/` - Next.js App Router (`layout.tsx`, `page.tsx`, `globals.css`)
+- `components/` - Komponen modular UI (Hero, Tentang, Pengalaman, Pendidikan, Organisasi, Prestasi, Proyek, Keahlian, Sertifikasi, Kontak, Footer, Navbar)
+- `data/` - Sumber data portofolio terstruktur (`portfolioData.ts`)
+- `public/` - Aset statis & gambar portofolio (`public/images/`)
+- `AGENTS.md` - Standar kualitas desain dan frontend Anti-AI-Slop
+
+---
 
 ## 📞 Kontak
 
-Jika Anda tertarik untuk berkolaborasi, menawarkan pekerjaan, atau sekadar bertanya, silakan hubungi saya melalui website portofolio saya.
+Jika Anda tertarik untuk berkolaborasi, menawarkan proyek, atau berdiskusi:
+- **Email:** syahputranabil521@gmail.com
+- **LinkedIn:** [linkedin.com/in/niamilah-n-s](https://linkedin.com/in/niamilah-n-s)
+- **GitHub:** [github.com/genzabis](https://github.com/genzabis)
 
 ---
 *Dibuat oleh Niamilah Nabil Syahputra*
