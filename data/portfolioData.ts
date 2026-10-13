@@ -31,6 +31,15 @@ export const PERSONAL_INFO = {
 
 export const EXPERIENCES: Experience[] = [
   {
+    company: "Faculty of Science & Technology Portal",
+    department: "Frontend Developer",
+    link: "https://saintekku.uinsaizu.ac.id",
+    responsibilities: [
+      "Developed the frontend for the official Faculty of Science & Technology portal at UIN Prof. K.H. Saifuddin Zuhri Purwokerto.",
+      "Built user interfaces for accessing faculty information, academic resources, and archives.",
+    ],
+  },
+  {
     company: "Mawapres Awards — Student Achievement Information System",
     department: "Full Stack Developer",
     link: "https://mawapres.uinsaizu.ac.id",
@@ -66,7 +75,7 @@ export const EXPERIENCES: Experience[] = [
     link: "https://saizu-link.uinsaizu.ac.id",
     responsibilities: [
       "Handled and resolved 50+ student support issues related to campus systems at saizu-link.uinsaizu.ac.id.",
-      "Built and maintained the Faculty of Science and Technology website (saintekku.uinsaizu.ac.id) as a full stack developer, improving access to academic resources for 800+ students and 20+ educators.",
+      "Built and maintained the frontend of the Faculty of Science and Technology website (saintekku.uinsaizu.ac.id), improving access to academic resources for 800+ students and 20+ educators.",
     ],
   },
   {
@@ -220,7 +229,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "Faculty of Science & Technology Portal",
-    role: "Full Stack Developer",
+    role: "Frontend Developer",
     year: "2025",
     image: "/images/mawapres.png",
     link: "https://saintekku.uinsaizu.ac.id",

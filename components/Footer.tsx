@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <div className="max-w-[85%] mx-auto">
         <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-12 md:mb-16 gap-8">
           <div>
-            <div className="text-[18vw] sm:text-[14vw] md:text-[9vw] font-serif font-normal tracking-tighter leading-[0.8] text-slate-900 mb-4">
+            <div className="text-3xl sm:text-4xl font-serif font-normal tracking-tighter leading-none text-slate-900 mb-4">
               NNS<span className="text-slate-300">.</span>
             </div>
             <p className="text-sm text-slate-500 font-light max-w-md">
